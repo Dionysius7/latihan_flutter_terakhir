@@ -10,18 +10,6 @@ class UniversityController extends GetxController{
   var constant = new Const();
   var countryName = "";
 
-  Future<String> fetchUniversityData() async {
-    var response = await service.getAllUnivIndoData(constant.indonesiaUniversity);
-    print(response.statusCode.toString());
-    if(response.statusCode == 200){
-      var univData = universitasFromJson(response.body);
-      university.value = univData;
-      return response.statusCode.toString();
-    } else {
-      return response.statusCode.toString();
-    }
-  }
-
   Future<String> findUniversityData(country) async {
     var response = await service.findAllUnivData(constant.urlUniv, country);
     print(response.statusCode.toString());

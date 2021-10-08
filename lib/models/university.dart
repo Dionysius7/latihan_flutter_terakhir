@@ -19,7 +19,7 @@ class Universitas {
     String? name;
     String? country;
     List<String>? domains;
-    String? stateProvince;
+    dynamic stateProvince;
 
     factory Universitas.fromJson(Map<String, dynamic> json) => Universitas(
         alphaTwoCode: json["alpha_two_code"],

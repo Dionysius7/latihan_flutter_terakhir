@@ -7,10 +7,6 @@ import 'package:http/http.dart' as http;
 
 // print(await http.read(Uri.parse('https://example.com/foobar.txt')));
 class Service {
-  Future getAllUnivIndoData(url){
-    var finalUrl = Uri.parse(url);
-      return http.get(finalUrl);
-  }
   Future findAllUnivData(url, country){
     var finalUrl = Uri.parse(url + country);
     print(finalUrl);
